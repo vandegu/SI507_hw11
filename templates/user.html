@@ -1,0 +1,18 @@
+{% if hour <= 12 %}
+  <h1>Good morning, {{name}}!</h1>
+{% elif hour > 12 and hour <= 16 %}
+  <h1>Good afternoon, {{name}}!</h1>
+{% elif hour > 16 and hour <= 20 %}
+  <h1>Good evening, {{name}}!</h1>
+{% elif hour > 20 and hour <= 24 %}
+  <h1>Good night, {{name}}!</h1>
+{% endif %}
+
+
+<h2>Today's top headers in technology are...</h2>
+
+<ol>
+{% for item in newslist %}
+  <h4><li>{{item}}</li></h4>
+{% endfor %}
+</ol>
